@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useEffect} from 'react';
 import classNames from 'classnames';
 
 import styles from './ProgressControl.module.css';
@@ -6,30 +6,70 @@ import styles from './ProgressControl.module.css';
 const ProgressControl = ({buffered, currentTime, duration, onChange}) => {
     const railWrapperElRef = useRef();
     const wrapperElRef = useRef();
+    const details = useRef({
+        dragStart: false,
+    });
 
     const durationAsPercent = duration / 100;
     const bufferedPos = buffered / durationAsPercent;
     const currentTimePos = currentTime / durationAsPercent;
 
-    const onMouseMove = (event) => {
-        // console.log(railWrapperElRef.current.offsetWidth);
-        // console.log(event.pageX - railWrapperElRef.current.offsetLeft);
-    }
-    const onMouseLeave = (event) => {
-        // console.log(event.pageX);
-        // console.log(event.target.offsetWidth);
-        // console.log(event.pageX - event.target.offsetLeft);
-    }
-    const onClick = (event) => {
+    const move = (pageX) => {
         const boundingClientRect = wrapperElRef.current.getBoundingClientRect();
-        const clickPos = (event.pageX - boundingClientRect.left) / (boundingClientRect.width / 100);
+        const clickPos = (pageX - boundingClientRect.left) / (boundingClientRect.width / 100);
+        const requestTime = durationAsPercent * clickPos;
 
-        onChange(durationAsPercent * clickPos);
+
+        if (requestTime < 0) {
+            onChange(0);
+        } else if (requestTime > duration) {
+            onChange(duration);
+        } else {
+            onChange(requestTime);
+        }
     }
+
+    const onMouseMove = (event) => {
+        if (!details.current.dragStart) return;
+
+        event.preventDefault();
+        move(event.pageX);
+    }
+    const onMouseDown = (event) => {
+        if (event.target !== wrapperElRef.current && !wrapperElRef.current.contains(event.target)) return;
+
+        details.current.dragStart = true;
+        move(event.pageX);
+    }
+    const onMouseLeave = () => {
+        details.current.dragStart = false;
+    }
+    const onMouseUp = () => {
+        details.current.dragStart = false;
+    }
+
+    useEffect(() => {
+        document.addEventListener('mouseup', onMouseUp);
+        document.addEventListener('mousedown', onMouseDown);
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseleave', onMouseLeave);
+
+        const remove = () => {
+            document.removeEventListener('mouseup', onMouseUp);
+            document.removeEventListener('mousedown', onMouseDown);
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseleave', onMouseLeave);
+        }
+
+        return remove;
+    }, [onMouseUp, onMouseDown, onMouseMove]);
 
     return (
-        <div ref={wrapperElRef} className={styles.wrapper} onClick={onClick}>
-            <div ref={railWrapperElRef} className={styles.railWrapper} onMouseMove={onMouseMove} onMouseLeave={onMouseLeave}>
+        <div
+            ref={wrapperElRef}
+            className={styles.wrapper}
+        >
+            <div ref={railWrapperElRef} className={styles.railWrapper} >
                 <div
                     className={styles.cursor}
                     style={{

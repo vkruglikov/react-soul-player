@@ -2,45 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32f9f1e-ea3e-4d4e-bf6b-f51c3aa86e56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VideoPlayer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VideoPlayer.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/FullScreenButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/FullScreenButton.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/exit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/full-screen.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/PlayButton/PlayButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/PlayButton/PlayIcon.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/PlayButton/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/PlayButton/play.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/ProgressControl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/ProgressControl.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/Shadow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/Shadow.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/useControlActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/usePlayerState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/useVideoEvents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/react-soul-player.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/react-soul-player.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controls/Time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controls/Time.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controls/VolumeSlider/VolumeSlider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controls/VolumeSlider/VolumeSlider.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controls/VolumeSlider/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controls/VolumeSlider/speaker.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoPlayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoPlayer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoPlayer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/FullScreenButton/FullScreenButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/FullScreenButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/FullScreenButton/FullScreenButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/FullScreenButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/ProgressControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/ProgressControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/ProgressControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/ProgressControl.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,8 +53,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/controls/FullScreenButton" />
+      <recent name="$PROJECT_DIR$/src/components/Slider" />
       <recent name="$PROJECT_DIR$/src/controls" />
+      <recent name="$PROJECT_DIR$/src/controls/FullScreenButton" />
       <recent name="$PROJECT_DIR$/src/controls/PlayButton" />
     </key>
   </component>
@@ -106,7 +82,10 @@
       <option name="presentableId" value="Default" />
       <updated>1585328844583</updated>
       <workItem from="1585328845786" duration="33367000" />
-      <workItem from="1585596855409" duration="808000" />
+      <workItem from="1585596855409" duration="1125000" />
+      <workItem from="1586197169330" duration="2837000" />
+      <workItem from="1586284751157" duration="2231000" />
+      <workItem from="1586406082106" duration="3940000" />
     </task>
     <servers />
   </component>

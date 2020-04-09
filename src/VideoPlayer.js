@@ -5,6 +5,7 @@ import ProgressControl from './controls/ProgressControl';
 import PlayButton from './controls/PlayButton';
 import FullScreenButton from './controls/FullScreenButton';
 import Shadow from "./controls/Shadow";
+import Time from "./controls/Time";
 
 import usePlayerState from "./usePlayerState";
 import useVideoEvents from "./useVideoEvents";
@@ -71,13 +72,22 @@ const VideoPlayer = () => {
             <Shadow full={metaData.paused}  control={metaData.mouseActive || metaData.paused}/>
             {metaData.loadedMetadata && (
                 <div className={styles.control}>
-                    <ProgressControl
-                        currentTime={metaData.currentTime}
-                        buffered={metaData.buffered}
-                        duration={metaData.duration}
-                        onChange={setCurrentTime}
-                    />
-                    <FullScreenButton status={metaData.fullScreen} onClick={toggleFullScreen} />
+                    <div className={styles.control__row}>
+                        <ProgressControl
+                            currentTime={metaData.currentTime}
+                            buffered={metaData.buffered}
+                            duration={metaData.duration}
+                            onChange={setCurrentTime}
+                        />
+                    </div>
+                    <div className={classNames(styles.control__row, styles.control__actions)}>
+                        <div className={styles.control__actionsLeft}>
+                            <Time seconds={metaData.currentTime} />
+                        </div>
+                        <div className={styles.control__actionsRight}>
+                            <FullScreenButton status={metaData.fullScreen} onClick={toggleFullScreen} />
+                        </div>
+                    </div>
                 </div>
             )}
         </div>

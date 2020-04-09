@@ -1,4 +1,6 @@
 .wrapper {
+    /*width: 1280px;*/
+    /*height: 720px;*/
     position: relative;
     /*font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
     font-family: Helvetica, Arial, sans-serif;
@@ -26,8 +28,27 @@
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
     align-items: center;
     z-index: 500;
-    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    /*padding: 0 15px 10px 15px;*/
+    box-sizing: border-box;
+}
+
+.control__row {
+    width: 100%;
+}
+
+.control__actions {
+    display: flex;
+}
+
+.control__actionsRight {
+    margin-left: auto;
+}
+
+.control__actionsLeft {
+    display: flex;
+    align-items: center;
 }
