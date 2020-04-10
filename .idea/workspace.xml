@@ -2,21 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32f9f1e-ea3e-4d4e-bf6b-f51c3aa86e56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controls/Time.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/Time.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/VolumeSlider/VolumeSlider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/VolumeSlider/VolumeSlider.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/VolumeSlider/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/VolumeSlider/speaker.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controls/PlayButton/PlayButtonAbsolute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controls/PlayButton/pause.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoPlayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VideoPlayer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoPlayer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controls/FullScreenButton/FullScreenButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/FullScreenButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controls/FullScreenButton/FullScreenButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/FullScreenButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/PlayButton/PlayButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/PlayButton/PlayButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/PlayButton/PlayIcon.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/PlayButton/PlayIcon.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/PlayButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/PlayButton/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controls/ProgressControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/ProgressControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controls/ProgressControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/ProgressControl.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/Shadow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/Shadow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/Shadow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/Shadow.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/Time.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/Time.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/VolumeSlider/VolumeSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/VolumeSlider/VolumeSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/VolumeSlider/VolumeSlider.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/VolumeSlider/VolumeSlider.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/useControlActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/useControlActions.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -53,10 +55,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/src/controls/PlayButton" />
       <recent name="$PROJECT_DIR$/src/components/Slider" />
       <recent name="$PROJECT_DIR$/src/controls" />
       <recent name="$PROJECT_DIR$/src/controls/FullScreenButton" />
-      <recent name="$PROJECT_DIR$/src/controls/PlayButton" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -85,7 +88,8 @@
       <workItem from="1585596855409" duration="1125000" />
       <workItem from="1586197169330" duration="2837000" />
       <workItem from="1586284751157" duration="2231000" />
-      <workItem from="1586406082106" duration="3940000" />
+      <workItem from="1586406082106" duration="4021000" />
+      <workItem from="1586490020884" duration="3033000" />
     </task>
     <servers />
   </component>

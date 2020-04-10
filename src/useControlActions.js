@@ -10,6 +10,14 @@ const useControlActions = ({
         videoElRef.current.play()
     }, [videoElRef]);
 
+    const togglePlayVideo = useCallback(() => {
+        if (metaData.paused) {
+            videoElRef.current.play()
+        } else {
+            videoElRef.current.pause()
+        }
+    }, [videoElRef, metaData]);
+
     const pauseVideo = useCallback(() => {
         videoElRef.current.pause()
     }, [videoElRef]);
@@ -39,9 +47,10 @@ const useControlActions = ({
             ...values,
             currentTime: time
         }));
-    }, [metaData.paused, pauseVideo, setMetaData, videoElRef]);
+    }, [setMetaData, videoElRef]);
 
     return {
+        togglePlayVideo,
         playVideo,
         pauseVideo,
         fullScreen,

@@ -42,6 +42,8 @@
 
 .control__actions {
     display: flex;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .control__actionsRight {

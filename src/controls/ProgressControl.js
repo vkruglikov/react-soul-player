@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useCallback} from 'react';
 import classNames from 'classnames';
 
 import styles from './ProgressControl.module.css';
@@ -14,7 +14,7 @@ const ProgressControl = ({buffered, currentTime, duration, onChange}) => {
     const bufferedPos = buffered / durationAsPercent;
     const currentTimePos = currentTime / durationAsPercent;
 
-    const move = (pageX) => {
+    const move = useCallback((pageX) => {
         const boundingClientRect = wrapperElRef.current.getBoundingClientRect();
         const clickPos = (pageX - boundingClientRect.left) / (boundingClientRect.width / 100);
         const requestTime = durationAsPercent * clickPos;
@@ -27,26 +27,26 @@ const ProgressControl = ({buffered, currentTime, duration, onChange}) => {
         } else {
             onChange(requestTime);
         }
-    }
+    }, [duration, durationAsPercent, onChange])
 
-    const onMouseMove = (event) => {
+    const onMouseMove = useCallback((event) => {
         if (!details.current.dragStart) return;
 
         event.preventDefault();
-        move(event.pageX);
-    }
-    const onMouseDown = (event) => {
+        move(event.pageX || event.touches[0].pageX);
+    }, [move])
+    const onMouseDown = useCallback((event) => {
         if (event.target !== wrapperElRef.current && !wrapperElRef.current.contains(event.target)) return;
 
         details.current.dragStart = true;
-        move(event.pageX);
-    }
-    const onMouseLeave = () => {
+        move(event.pageX || event.touches[0].pageX);
+    }, [move]);
+    const onMouseLeave = useCallback(() => {
         details.current.dragStart = false;
-    }
-    const onMouseUp = () => {
+    }, []);
+    const onMouseUp = useCallback(() => {
         details.current.dragStart = false;
-    }
+    }, []);
 
     useEffect(() => {
         document.addEventListener('mouseup', onMouseUp);
@@ -54,15 +54,25 @@ const ProgressControl = ({buffered, currentTime, duration, onChange}) => {
         document.addEventListener('mousemove', onMouseMove);
         document.addEventListener('mouseleave', onMouseLeave);
 
+        document.addEventListener('touchend', onMouseUp, {passive:false});
+        document.addEventListener('touchstart', onMouseDown, {passive:false});
+        document.addEventListener('touchmove', onMouseMove, {passive:false});
+        document.addEventListener('touchcancel', onMouseLeave, {passive:false});
+
         const remove = () => {
             document.removeEventListener('mouseup', onMouseUp);
             document.removeEventListener('mousedown', onMouseDown);
             document.removeEventListener('mousemove', onMouseMove);
             document.removeEventListener('mouseleave', onMouseLeave);
+
+            document.removeEventListener('touchend', onMouseUp);
+            document.removeEventListener('touchstart', onMouseDown);
+            document.removeEventListener('touchmove', onMouseMove);
+            document.removeEventListener('touchcancel', onMouseLeave);
         }
 
         return remove;
-    }, [onMouseUp, onMouseDown, onMouseMove]);
+    }, [onMouseUp, onMouseDown, onMouseMove, onMouseLeave]);
 
     return (
         <div

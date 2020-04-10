@@ -1,4 +1,21 @@
 .wrapper {
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.wrapper svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+.absolute {
     position: absolute;
     top: calc(50% - 25px);
     left: calc(50% - 25px);
@@ -15,7 +32,7 @@
     cursor: pointer;
 }
 
-.wrapper svg {
+.absolute svg {
     fill: #fff;
     flex: 1;
 }

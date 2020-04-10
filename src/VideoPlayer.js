@@ -2,8 +2,9 @@ import React, {useRef} from "react";
 import classNames from 'classnames';
 
 import ProgressControl from './controls/ProgressControl';
-import PlayButton from './controls/PlayButton';
+import PlayButton, {PlayButtonAbsolute} from './controls/PlayButton';
 import FullScreenButton from './controls/FullScreenButton';
+import VolumeSlider from './controls/VolumeSlider';
 import Shadow from "./controls/Shadow";
 import Time from "./controls/Time";
 
@@ -22,6 +23,7 @@ const VideoPlayer = () => {
     } = usePlayerState();
 
     const {
+        togglePlayVideo,
         playVideo,
         pauseVideo,
         toggleFullScreen,
@@ -60,7 +62,7 @@ const VideoPlayer = () => {
                     [styles.videoContainer_hideMouse]: !metaData.mouseActive && !metaData.paused,
                 })}
             >
-                {metaData.paused && <PlayButton onClick={playVideo} />}
+                {metaData.paused && <PlayButtonAbsolute onClick={playVideo} />}
                 <video {...videoEvents} ref={videoElRef} className={styles.video} controls={false}
                     style={{
                         // visibility: 'hidden'
@@ -68,8 +70,8 @@ const VideoPlayer = () => {
                 >
                     <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" type="video/mp4" />
                 </video>
+                <Shadow full={metaData.paused}  control={metaData.mouseActive || metaData.paused}/>
             </div>
-            <Shadow full={metaData.paused}  control={metaData.mouseActive || metaData.paused}/>
             {metaData.loadedMetadata && (
                 <div className={styles.control}>
                     <div className={styles.control__row}>
@@ -82,6 +84,7 @@ const VideoPlayer = () => {
                     </div>
                     <div className={classNames(styles.control__row, styles.control__actions)}>
                         <div className={styles.control__actionsLeft}>
+                            <PlayButton onClick={togglePlayVideo} paused={metaData.paused} />
                             <Time seconds={metaData.currentTime} />
                         </div>
                         <div className={styles.control__actionsRight}>
