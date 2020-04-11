@@ -1,0 +1,48 @@
+.controlContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.control__fullLayer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 300;
+}
+.control {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    /*padding: 0 15px 10px 15px;*/
+    box-sizing: border-box;
+}
+
+.control__row {
+    width: 100%;
+}
+
+.control__actions {
+    display: flex;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.control__actionsRight {
+    margin-left: auto;
+}
+
+.control__actionsLeft {
+    display: flex;
+    align-items: center;
+}

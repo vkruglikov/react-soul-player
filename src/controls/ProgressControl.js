@@ -1,9 +1,9 @@
-import React, {useRef, useEffect, useCallback} from 'react';
+import React, {useRef, useEffect, useCallback, memo} from 'react';
 import classNames from 'classnames';
 
 import styles from './ProgressControl.module.css';
 
-const ProgressControl = ({buffered, currentTime, duration, onChange}) => {
+const ProgressControl = ({videoElRef, buffered, currentTime, duration, onChange}) => {
     const railWrapperElRef = useRef();
     const wrapperElRef = useRef();
     const details = useRef({
@@ -33,13 +33,13 @@ const ProgressControl = ({buffered, currentTime, duration, onChange}) => {
         if (!details.current.dragStart) return;
 
         event.preventDefault();
-        move(event.pageX || event.touches[0].pageX);
+        move(typeof event.pageX !== 'undefined' ? event.pageX : event.touches[0].pageX);
     }, [move])
     const onMouseDown = useCallback((event) => {
         if (event.target !== wrapperElRef.current && !wrapperElRef.current.contains(event.target)) return;
 
         details.current.dragStart = true;
-        move(event.pageX || event.touches[0].pageX);
+        move(typeof event.pageX !== 'undefined' ? event.pageX : event.touches[0].pageX);
     }, [move]);
     const onMouseLeave = useCallback(() => {
         details.current.dragStart = false;
@@ -104,4 +104,4 @@ const ProgressControl = ({buffered, currentTime, duration, onChange}) => {
     )
 }
 
-export default ProgressControl;
+export default memo(ProgressControl);

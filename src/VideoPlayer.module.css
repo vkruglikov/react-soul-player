@@ -1,56 +1,23 @@
 .wrapper {
-    /*width: 1280px;*/
-    /*height: 720px;*/
+    background: #000;
     position: relative;
-    /*font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
     font-family: Helvetica, Arial, sans-serif;
 }
 
-.videoContainer {
-    position: relative;
-    height: 100%;
-    z-index: 500;
-}
-
-.videoContainer_hideMouse, .videoContainer_hideMouse * {
-    cursor: none;
-}
-
-.video {
-    display: block;
-    outline: none;
-    width: 100%;
-    height: 100%;
-}
-
-.control {
+.customContainer {
     position: absolute;
-    left: 0;
+    top: 0;
     right: 0;
     bottom: 0;
-    align-items: center;
-    z-index: 500;
-    display: flex;
-    flex-direction: column;
-    /*padding: 0 15px 10px 15px;*/
-    box-sizing: border-box;
+    left: 0;
+    z-index: 750;
 }
 
-.control__row {
-    width: 100%;
-}
-
-.control__actions {
-    display: flex;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-.control__actionsRight {
-    margin-left: auto;
-}
-
-.control__actionsLeft {
-    display: flex;
-    align-items: center;
+.effectsLayer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 }

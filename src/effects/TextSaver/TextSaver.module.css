@@ -1,0 +1,14 @@
+.wrapper {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #fff;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.description {
+    font-size: 18px;
+}

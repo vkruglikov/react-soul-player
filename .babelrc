@@ -1,0 +1,10 @@
+{
+  "presets": [["react-app", { "absoluteRuntime": false }]],
+  "plugins": [
+    [
+      "css-modules-transform", {
+        "extractCss": "./dist/styles.css"
+      }
+    ]
+  ]
+}
