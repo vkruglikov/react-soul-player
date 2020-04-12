@@ -1,3 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![NPM](https://img.shields.io/npm/v/react-soul-player.svg)](https://www.npmjs.com/package/react-soul-player)
 
 ![Alt text](./assets/screen.png)
