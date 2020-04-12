@@ -13,7 +13,7 @@ import EffectsContainer from "./EffectsContainer";
 
 import styles from "./ControlContainer.module.css";
 
-const ControlContainer = ({playerId, videoElRef, playerContainerElRef}) => {
+const ControlContainer = ({playerId, videoElRef, playerContainerElRef, effects}) => {
     const {
         loadedMetadata,
         paused,
@@ -44,7 +44,7 @@ const ControlContainer = ({playerId, videoElRef, playerContainerElRef}) => {
                 onMouseMove={onMouseMove}
                 className={styles.control__fullLayer}
             >
-                <EffectsContainer playerId={playerId} />
+                <EffectsContainer playerId={playerId}>{effects}</EffectsContainer>
             </div>
             {paused && <PlayButtonAbsolute onClick={playVideo} />}
             <div className={styles.control}>

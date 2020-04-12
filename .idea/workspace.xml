@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32f9f1e-ea3e-4d4e-bf6b-f51c3aa86e56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/1080p.mov" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/AbstractEffect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/ControlContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/ControlContainer.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/EffectsContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/VideoContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/VideoContainer.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/useControlActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/useVideoEvents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controls/useVideoFrames.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/effects/TextSaver/TextSaver.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/effects/TextSaver/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/selectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoPlayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VideoPlayer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoPlayer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controls/ProgressControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/ProgressControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/useControlActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/usePlayerState.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/useVideoEvents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +82,7 @@
       <workItem from="1586284751157" duration="2231000" />
       <workItem from="1586406082106" duration="4021000" />
       <workItem from="1586490020884" duration="3451000" />
-      <workItem from="1586529555645" duration="35128000" />
+      <workItem from="1586529555645" duration="38066000" />
     </task>
     <servers />
   </component>

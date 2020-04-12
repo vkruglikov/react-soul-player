@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const AbstractEffect = ({currentTime, timeStart, timeEnd, children}) => {
+const AbstractEffect = ({timeStart, timeEnd, children, currentTime}) => {
     const isVisible = currentTime > timeStart && currentTime < timeEnd;
 
     return isVisible && children;

@@ -1,4 +1,4 @@
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {
     ON_DURATION_CHANGE_ACTION, ON_FULL_SCREEN_CHANGE_ACTION, ON_LOADED_META_DATA_ACTION,

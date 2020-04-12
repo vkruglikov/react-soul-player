@@ -34,11 +34,6 @@ const player = (state = {}, action) => {
                 ...playerState,
                 paused: true
             }));
-        case ON_PAUSE_ACTION:
-            return updatePlayerState(state, action.playerId, (playerState) => ({
-                ...playerState,
-                paused: true
-            }));
         case ON_PLAY_ACTION:
             return updatePlayerState(state, action.playerId, (playerState) => ({
                 ...playerState,
