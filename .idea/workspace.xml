@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32f9f1e-ea3e-4d4e-bf6b-f51c3aa86e56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/containers/fullScreenUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.babelrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoPlayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VideoPlayer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoPlayer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ControlContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ControlContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ControlContainer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ControlContainer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/VideoContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/VideoContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/VideoContainer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/VideoContainer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/useControlActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/useControlActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/useVideoEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/useVideoEvents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controls/ProgressControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/ProgressControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controls/ProgressControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/ProgressControl.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controls/Shadow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/Shadow.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/FullScreenButton/exit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/exit.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/FullScreenButton/full-screen.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/FullScreenButton/full-screen.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,6 +15,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
