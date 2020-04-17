@@ -35,7 +35,7 @@ const useVideoEvents = ({ playerId, playerContainerElRef }) => {
         playerContainerElRef.current.addEventListener("fullscreenchange", handler);
 
         const unsubscribe = () => {
-            playerContainerElRef.current.removeEventListener("fullscreenchange", handler);
+            playerContainerElRef.current && playerContainerElRef.current.removeEventListener("fullscreenchange", handler);
         }
 
         return unsubscribe;

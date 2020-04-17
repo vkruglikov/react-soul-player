@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './ProgressControl.module.css';
 
-const ProgressControl = ({videoElRef, buffered, currentTime, duration, onChange}) => {
+const ProgressControl = ({fullScreen, buffered, currentTime, duration, onChange}) => {
     const railWrapperElRef = useRef();
     const wrapperElRef = useRef();
     const details = useRef({
@@ -77,7 +77,9 @@ const ProgressControl = ({videoElRef, buffered, currentTime, duration, onChange}
     return (
         <div
             ref={wrapperElRef}
-            className={styles.wrapper}
+            className={classNames(styles.wrapper, {
+                [styles.wrapper_fullScreen]: fullScreen
+            })}
         >
             <div ref={railWrapperElRef} className={styles.railWrapper} >
                 <div

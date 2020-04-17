@@ -1,8 +1,8 @@
-import React, {memo} from 'react';
+import React, {memo, useEffect} from 'react';
 import classNames from "classnames";
-import {useSelector} from "react-redux";
+import {useSelector, useDispatch} from "react-redux";
 
-import PlayButton, {PlayButtonAbsolute} from "../controls/PlayButton";
+import {PlayButtonAbsolute} from "../controls/PlayButton";
 import ProgressControl from "../controls/ProgressControl";
 import Time from "../controls/Time";
 import FullScreenButton from "../controls/FullScreenButton";
@@ -10,8 +10,10 @@ import {getPlayerState} from "../redux/selectors";
 import useControlActions from "./useControlActions";
 
 import EffectsContainer from "./EffectsContainer";
+import fullScreenUtils from "./fullScreenUtils";
 
 import styles from "./ControlContainer.module.css";
+import {ON_FULL_SCREEN_CHANGE_ACTION} from "../redux/constants";
 
 const ControlContainer = ({playerId, videoElRef, playerContainerElRef, effects}) => {
     const {
@@ -20,7 +22,8 @@ const ControlContainer = ({playerId, videoElRef, playerContainerElRef, effects})
         currentTime,
         buffered,
         duration,
-        fullScreen
+        fullScreen,
+        fullScreenEnabled,
     } = useSelector((state) => getPlayerState(state, playerId));
 
     const {
@@ -34,6 +37,29 @@ const ControlContainer = ({playerId, videoElRef, playerContainerElRef, effects})
         videoElRef,
         playerContainerElRef,
     });
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (!fullScreenEnabled) return;
+
+        const handler = () => {
+            const isFullscreen = fullScreenUtils.fullscreenElement === playerContainerElRef.current;
+
+            if (fullScreen === isFullscreen) return;
+
+            dispatch({
+                type: ON_FULL_SCREEN_CHANGE_ACTION,
+                playerId,
+                payload: isFullscreen
+            });
+        };
+
+        fullScreenUtils.addEventListener(handler)
+
+        return () => {
+            fullScreenUtils.removeEventListener(handler);
+        }
+    }, [dispatch, fullScreen, fullScreenEnabled, playerContainerElRef, playerId]);
 
     return loadedMetadata ? (
         <div
@@ -47,24 +73,26 @@ const ControlContainer = ({playerId, videoElRef, playerContainerElRef, effects})
                 <EffectsContainer playerId={playerId}>{effects}</EffectsContainer>
             </div>
             {paused && <PlayButtonAbsolute onClick={playVideo} />}
-            <div className={styles.control}>
-                <div className={styles.control__row}>
-                    <ProgressControl
-                        videoElRef={videoElRef}
-                        currentTime={currentTime}
-                        buffered={buffered}
-                        duration={duration}
-                        onChange={setCurrentTime}
-                    />
-                </div>
+            <div className={classNames(styles.control, {
+                [styles.control_fullScreen]: fullScreen
+            })}>
                 <div className={classNames(styles.control__row, styles.control__actions)}>
                     <div className={styles.control__actionsLeft}>
-                        <PlayButton onClick={togglePlayVideo} paused={paused} />
                         <Time seconds={currentTime} />
                     </div>
                     <div className={styles.control__actionsRight}>
                         <FullScreenButton status={fullScreen} onClick={toggleFullScreen} />
                     </div>
+                </div>
+                <div className={styles.control__row}>
+                    <ProgressControl
+                        videoElRef={videoElRef}
+                        fullScreen={fullScreen}
+                        currentTime={currentTime}
+                        buffered={buffered}
+                        duration={duration}
+                        onChange={setCurrentTime}
+                    />
                 </div>
             </div>
         </div>

@@ -16,6 +16,8 @@
     z-index: 300;
 }
 .control {
+    user-select: none;
+    pointer-events: none;
     position: absolute;
     left: 0;
     right: 0;
@@ -26,6 +28,16 @@
     flex-direction: column;
     /*padding: 0 15px 10px 15px;*/
     box-sizing: border-box;
+}
+
+.control_fullScreen {
+    bottom: 25px;
+    left: 10px;
+    right: 10px;
+}
+
+.control button {
+    pointer-events: auto;
 }
 
 .control__row {

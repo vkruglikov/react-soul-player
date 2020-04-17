@@ -2,6 +2,9 @@
     position: relative;
     height: 100%;
     z-index: 500;
+    margin: 0;
+    padding: 0;
+    background: #000;
 }
 
 .videoContainer_hideMouse, .videoContainer_hideMouse * {
@@ -13,4 +16,9 @@
     outline: none;
     width: 100%;
     height: 100%;
+}
+
+.video::-webkit-media-controls-panel,
+.video::-webkit-media-controls-start-playback-button {
+    display: none !important;
 }

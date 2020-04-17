@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32f9f1e-ea3e-4d4e-bf6b-f51c3aa86e56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/fullScreenUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoPlayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoPlayer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoPlayer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ControlContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ControlContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ControlContainer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ControlContainer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/VideoContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/VideoContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/VideoContainer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/VideoContainer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/useControlActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/useControlActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/useVideoEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/useVideoEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/ProgressControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/ProgressControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/ProgressControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/ProgressControl.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controls/Shadow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/controls/Shadow.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +44,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -86,7 +101,14 @@
       <workItem from="1586406082106" duration="4021000" />
       <workItem from="1586490020884" duration="3451000" />
       <workItem from="1586529555645" duration="38614000" />
-      <workItem from="1586696168139" duration="217000" />
+      <workItem from="1586696168139" duration="5141000" />
+      <workItem from="1586761341471" duration="67000" />
+      <workItem from="1586812767636" duration="739000" />
+      <workItem from="1586885956726" duration="4418000" />
+      <workItem from="1586974145706" duration="8250000" />
+      <workItem from="1587023094285" duration="16000" />
+      <workItem from="1587049795966" duration="717000" />
+      <workItem from="1587066889704" duration="3000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,7 @@
-import React, {memo} from 'react';
+import React, {memo, useEffect} from 'react';
 import classNames from "classnames";
 import {useSelector} from "react-redux";
+import  enableInlineVideo from 'iphone-inline-video';
 
 import {getPlayerState} from "../redux/selectors";
 
@@ -19,15 +20,24 @@ const ControlContainer = ({playerId, videoElRef, playerContainerElRef}) => {
         playerContainerElRef,
     });
 
+    useEffect(() => {
+        enableInlineVideo(videoElRef.current);
+    }, [videoElRef]);
+
     return (
         <div
             className={classNames(styles.videoContainer, {
                 [styles.videoContainer_hideMouse]: !mouseActive && !paused,
             })}
         >
-            <video {...videoEventHandlers} ref={videoElRef} className={styles.video} controls={false}>
-                <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" type="video/mp4" preload="metadata" />
-            </video>
+            <video
+                {...videoEventHandlers}
+                ref={videoElRef}
+                className={styles.video}
+                src={'https://media.w3.org/2010/05/sintel/trailer_hd.mp4'}
+                controls={false}
+                playsInline={true}
+            />
             <Shadow full={paused}  control={mouseActive || paused}/>
         </div>
     )

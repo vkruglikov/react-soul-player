@@ -1,18 +1,22 @@
 .wrapper {
-    padding: 10px 0 5px 0;
-    margin: 0 10px;
+    padding: 10px 0 0 0;
     cursor: pointer;
-    flex: 1;
+    flex: 1 1;
+    pointer-events: auto;
+}
+
+.wrapper_fullScreen {
+    padding-bottom: 10px;
 }
 
 .cursor {
     width: 8px;
-    background: white;
+    background: #ff0100;
     position: absolute;
     z-index: 40;
     height: 8px;
     border-radius: 50%;
-    transform: scale(1.6);
+    transform: scale(1.7);
     margin-left: -4px;
 }
 
@@ -40,5 +44,5 @@
 
 .rail_current {
     z-index: 30;
-    background: #ffffff;
+    background: #ff0100;
 }

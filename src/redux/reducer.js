@@ -8,7 +8,9 @@ import {
     ON_DURATION_CHANGE_ACTION,
     ON_LOADED_META_DATA_ACTION,
     ON_TIME_UPDATE_ACTION,
-    ON_FULL_SCREEN_CHANGE_ACTION, SET_CURRENT_TIME_ACTION, SET_MOUSE_ACTIVE_ACTION
+    ON_FULL_SCREEN_CHANGE_ACTION,
+    SET_CURRENT_TIME_ACTION,
+    SET_MOUSE_ACTIVE_ACTION, SET_FULL_SCREEN_ACTION
 } from "./constants";
 
 
@@ -71,21 +73,15 @@ const player = (state = {}, action) => {
                 currentTime: action.payload.currentTime,
                 buffered: action.payload.buffered
             }));
+        case SET_FULL_SCREEN_ACTION:
         case ON_FULL_SCREEN_CHANGE_ACTION:
             return updatePlayerState(state, action.playerId, (playerState) => ({
                 ...playerState,
                 fullScreen: action.payload
             }));
         case INIT_ACTION:
-            return updatePlayerState(state, action.playerId, (playerState) => ({
-                duration: 0,
-                buffered: 0,
-                currentTime: 0,
-                loadedMetadata: false,
-                paused: true,
-                waiting: false,
-                fullScreen: false,
-                mouseActive: true,
+            return updatePlayerState(state, action.playerId, () => ({
+                ...action.payload
             }));
         default:
             return state

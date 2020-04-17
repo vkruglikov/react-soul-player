@@ -1,12 +1,16 @@
-import React, {useRef, useEffect} from "react";
+import React, {useRef, useEffect, useState} from "react";
+import ReactDOM from 'react-dom';
 import {useDispatch, useSelector} from "react-redux";
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import ControlContainer from "./containers/ControlContainer";
 import VideoContainer from "./containers/VideoContainer";
 
-import styles from './VideoPlayer.module.css';
-import {INIT_ACTION} from "./redux/constants";
 import {getPlayerState} from "./redux/selectors";
+import {initPlayerAction} from "./redux/actions";
+
+import styles from './VideoPlayer.module.css';
 
 
 const VideoPlayer = ({id: playerId, children}) => {
@@ -14,18 +18,30 @@ const VideoPlayer = ({id: playerId, children}) => {
     const videoElRef = useRef();
 
     const isInitialized = useSelector((state) => !!getPlayerState(state, playerId));
+    const fullScreen = useSelector((state) => getPlayerState(state, playerId) && getPlayerState(state, playerId).fullScreen);
+    const fullScreenEnabled = useSelector((state) => getPlayerState(state, playerId) && getPlayerState(state, playerId).fullScreenEnabled);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch({
-            type: INIT_ACTION,
-            playerId
-        });
+        dispatch(initPlayerAction(playerId));
     }, [dispatch, playerId]);
+
+    useEffect(() => {
+        if (fullScreenEnabled) return;
+        
+        if (fullScreen) {
+            document.body.classList.add(styles.body_customFullscreen);
+        } else {
+            document.body.classList.remove(styles.body_customFullscreen);
+        }
+    }, [fullScreen, fullScreenEnabled]);
 
     return (
         <div
-            className={styles.wrapper}
+            className={classNames(styles.wrapper, {
+                [styles.wrapper_fullScreen]: fullScreen,
+                [styles.wrapper_customFullscreen]: fullScreen && !fullScreenEnabled
+            })}
             ref={playerContainerElRef}
         >
             {isInitialized && (
@@ -46,5 +62,14 @@ const VideoPlayer = ({id: playerId, children}) => {
         </div>
     )
 }
+
+VideoPlayer.propTypes = {
+    id: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
+    ]),
+    classNameControl: PropTypes.string
+}
+
 
 export default VideoPlayer;
