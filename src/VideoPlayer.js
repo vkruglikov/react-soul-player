@@ -13,7 +13,7 @@ import {initPlayerAction} from "./redux/actions";
 import styles from './VideoPlayer.module.css';
 
 
-const VideoPlayer = ({id: playerId, children}) => {
+const VideoPlayer = ({id: playerId, children, src}) => {
     const playerContainerElRef = useRef();
     const videoElRef = useRef();
 
@@ -47,6 +47,7 @@ const VideoPlayer = ({id: playerId, children}) => {
             {isInitialized && (
                 <React.Fragment>
                     <VideoContainer
+                        src={src}
                         playerId={playerId}
                         videoElRef={videoElRef}
                         playerContainerElRef={playerContainerElRef}

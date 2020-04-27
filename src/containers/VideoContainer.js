@@ -11,7 +11,7 @@ import useVideoEvents from "./useVideoEvents";
 import styles from './VideoContainer.module.css';
 
 
-const ControlContainer = ({playerId, videoElRef, playerContainerElRef}) => {
+const ControlContainer = ({src, playerId, videoElRef, playerContainerElRef}) => {
     const mouseActive = useSelector((state) => getPlayerState(state, playerId).mouseActive);
     const paused = useSelector((state) => getPlayerState(state, playerId).paused);
 
@@ -34,7 +34,7 @@ const ControlContainer = ({playerId, videoElRef, playerContainerElRef}) => {
                 {...videoEventHandlers}
                 ref={videoElRef}
                 className={styles.video}
-                src={'https://media.w3.org/2010/05/sintel/trailer_hd.mp4'}
+                src={src}
                 controls={false}
                 playsInline={true}
             />
