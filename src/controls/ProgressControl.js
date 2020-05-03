@@ -14,6 +14,7 @@ const ProgressControl = ({fullScreen, buffered, currentTime, duration, onChange}
     const bufferedPos = buffered / durationAsPercent;
     const currentTimePos = currentTime / durationAsPercent;
 
+    // FIXME Вызывать onChange только на end
     const move = useCallback((pageX) => {
         const boundingClientRect = wrapperElRef.current.getBoundingClientRect();
         const clickPos = (pageX - boundingClientRect.left) / (boundingClientRect.width / 100);
